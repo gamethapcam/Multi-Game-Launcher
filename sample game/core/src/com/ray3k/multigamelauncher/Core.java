@@ -5,6 +5,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import java.awt.SplashScreen;
 
 public class Core extends ApplicationAdapter {
 	SpriteBatch batch;
@@ -12,6 +13,7 @@ public class Core extends ApplicationAdapter {
 	
 	@Override
 	public void create () {
+                SplashScreen.getSplashScreen().close();
 		batch = new SpriteBatch();
 		img = new Texture("one.png");
 	}

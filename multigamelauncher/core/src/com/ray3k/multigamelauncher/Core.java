@@ -10,6 +10,8 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
+import java.io.File;
+import java.io.IOException;
 
 public class Core extends ApplicationAdapter {
     private Skin skin;
@@ -45,6 +47,15 @@ public class Core extends ApplicationAdapter {
                 
             }
         });
+    }
+    
+    public void runLocalGame(String localPath) {
+        try {
+            File file = new File(System.getProperty("user.dir") + "/" + localPath);
+            Runtime.getRuntime().exec("java -jar \"" + file.getName() + "\"", null, file.getParentFile());
+        } catch (IOException e) {
+            Gdx.app.error("Multi Game Launcher", "Error while executing external game...", e);
+        }
     }
 
     @Override
