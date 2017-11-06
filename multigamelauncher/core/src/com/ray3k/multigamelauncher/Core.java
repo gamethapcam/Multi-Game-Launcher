@@ -48,15 +48,6 @@ public class Core extends ApplicationAdapter {
             }
         });
     }
-    
-    public void runLocalGame(String localPath) {
-        try {
-            File file = new File(System.getProperty("user.dir") + "/" + localPath);
-            Runtime.getRuntime().exec("java -jar \"" + file.getName() + "\"", null, file.getParentFile());
-        } catch (IOException e) {
-            Gdx.app.error("Multi Game Launcher", "Error while executing external game...", e);
-        }
-    }
 
     @Override
     public void render() {
