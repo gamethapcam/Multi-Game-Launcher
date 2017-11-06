@@ -34,7 +34,7 @@ public class Core extends ApplicationAdapter {
         textButton.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeListener.ChangeEvent event, Actor actor) {
-                
+                runLocalGame("games/samplegame1.jar");
             }
         });
         
@@ -44,7 +44,7 @@ public class Core extends ApplicationAdapter {
         textButton.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeListener.ChangeEvent event, Actor actor) {
-                
+                runLocalGame("games/samplegame2.jar");
             }
         });
     }
