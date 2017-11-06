@@ -13,7 +13,7 @@ public class Core extends ApplicationAdapter {
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-		img = new Texture("one.jpg");
+		img = new Texture("one.png");
 	}
 
 	@Override
